@@ -8,5 +8,5 @@ fun main(args: Array<String>) {
 
     println("${people} people with ${pizza} pizzas")
     println("Each person gets ${(pizza * pizzaSlices) / people} pieces of pizza.")
-    println("There are ${(pizza * 8) % people} leftover pieces.")
+    println("There are ${(pizza * pizzaSlices) % people} leftover pieces.")
 }
