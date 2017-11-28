@@ -14,7 +14,7 @@ fun main(args: Array<String>) {
         r = 0.66;
     }
     val bac = (a * 5.14 / w * r) - .015 * h;
-    println("Your BAC is ${bac}")
+    println("Your BAC is ${Math.round(bac * 100) / 100.0}")
 
     for (entry in map) {
         if (bac <= entry.value) {
