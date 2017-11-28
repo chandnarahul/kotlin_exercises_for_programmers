@@ -3,11 +3,13 @@ fun main(args: Array<String>) {
     var amount = readLine().toString().toDouble();
     print("What is the state?")
     val state = readLine().toString();
-    if (state.equals("WI", true) || state.equals("Wisconsin", true)) {
-        println("The subtotal is ${amount}")
-        println("The tax is $0.55");
+
+    val isWisconsin = state.equals("WI", true) || state.equals("Wisconsin", true)
+    var op: String = ""
+    if (isWisconsin) {
+        op = "The subtotal is ${amount} \nThe tax is $0.55\n"
         amount += 0.55;
     }
-    println("The total is $${amount}")
-
+    op += "The total is $${amount}"
+    println(op)
 }
